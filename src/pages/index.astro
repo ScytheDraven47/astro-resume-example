@@ -1,4 +1,7 @@
 ---
+import IconList from '../components/IconList.astro';
+import JobListings from '../components/JobListings.astro';
+import '../styles/main.css';
 ---
 
 <html lang="en">
@@ -10,6 +13,21 @@
 		<title>Astro</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<div class="main-grid">
+			<main>
+				<p class="eyebrow">Skills & Experience</p>
+				<h1 class="page-title">My Resume</h1>
+				<p class="intro">
+					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam
+					consequatur quibusdam iusto? Tenetur soluta doloribus blanditiis?
+					Itaque ex sapiente rem.
+				</p>
+				<JobListings/>
+			</main>
+			<aside>
+				<h2 class="visually-hidden">My Skills</h2>
+				<IconList/>
+			</aside>
+		</div>
 	</body>
 </html>

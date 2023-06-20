@@ -1,0 +1,30 @@
+---
+import IconListItem from '../components/IconListItem.astro';
+---
+
+<ul class="icon-list" role="list">
+	<IconListItem skill="html" image="file-html.svg" />
+	<IconListItem skill="css" image="file-css.svg" />
+	<IconListItem skill="scss" image="js.svg" />
+	<IconListItem skill="js" image="react.svg" />
+	<IconListItem skill="react" image="node.svg" />
+</ul>
+
+<style>
+	
+	/* ? Icon List */
+
+	.icon-list {
+		--_border-size: 0.25rem;
+
+		margin: 0;
+		padding: 0;
+		height: 100%;
+		display: grid;
+		gap: 3rem;
+		align-content: center;
+		list-style-type: none;
+		border-left: var(--_border-size) solid var(--clr-primary-400);
+	}
+
+</style>

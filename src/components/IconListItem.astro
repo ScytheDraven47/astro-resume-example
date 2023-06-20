@@ -1,0 +1,33 @@
+---
+const {skill, image} = Astro.props
+---
+
+<li>
+	<p class="visually-hidden">{skill}</p>
+	<img src=`img/${image}` alt="" />
+</li>
+
+<style>
+	li {
+		position: relative;
+		padding-left: 3rem;
+	}
+	
+	li::before {
+		--_size: 0.5rem;
+
+		content: '';
+		position: absolute;
+		top: calc(50% - var(--_size) / 2);
+		left: calc((var(--_size) + var(--_border-size)) / -2);
+		width: var(--_size);
+		aspect-ratio: 1;
+		border-radius: 100%;
+		background-color: var(--clr-neutral-100);
+		outline: var(--_size) solid var(--clr-primary-400);
+	}
+
+	img {
+		width: 3rem;
+	}
+</style>
